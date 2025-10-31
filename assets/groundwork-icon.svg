@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Groundwork icon</title>
+  <desc id="desc">Stylised hand holding a portafilter emerging from a circular opening.</desc>
+  <g fill="#4a1f0b">
+    <ellipse cx="128" cy="208" rx="88" ry="28" opacity="0.25" />
+    <path d="M64 202c24 18 104 18 128 0v10c-24 18-104 18-128 0z" />
+    <rect x="100" y="112" width="56" height="76" rx="18" />
+    <path d="M144 64h58a14 14 0 0 1 14 14v4a14 14 0 0 1-14 14h-58z" />
+    <path d="M144 90h40l-12 26h-32z" />
+    <path d="M116 60h32a8 8 0 0 1 8 8v36h-48V68a8 8 0 0 1 8-8z" />
+    <path d="M88 108h88v32a44 44 0 0 1-44 44h-8a44 44 0 0 1-44-44z" />
+    <path d="M84 116h24v26H84a13 13 0 0 1-13-13v0a13 13 0 0 1 13-13z" />
+    <rect x="80" y="146" width="32" height="24" rx="10" />
+    <rect x="112" y="146" width="32" height="24" rx="10" />
+    <path d="M180 92h16v20a16 16 0 0 1-16 16z" />
+    <path d="M98 184h60v20a20 20 0 0 1-20 20h-20a20 20 0 0 1-20-20z" />
+    <path d="M116 44h20a12 12 0 0 1 12 12v4h-44v-4a12 12 0 0 1 12-12z" />
+    <circle cx="210" cy="80" r="26" fill="none" stroke="#4a1f0b" stroke-width="12" />
+    <circle cx="210" cy="80" r="12" />
+  </g>
+</svg>
