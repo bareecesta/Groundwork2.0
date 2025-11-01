@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Groundwork — Enquire About Training</title>
+    <link rel="icon" type="image/png" href="assets/Stickers (3).png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: '#4a1f0b',
+              cream: '#e8dfcc',
+              accent: '#f97316',
+            },
+            fontFamily: {
+              figtree: ['Figtree', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              hover: '0 12px 24px -12px rgba(74, 31, 11, 0.25)',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body data-page="contact" class="bg-white text-black">
+    <div id="nav-placeholder"></div>
+
+    <main>
+      <section class="bg-cream/60">
+        <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+          <span class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow">
+            Contact Groundwork
+          </span>
+          <div class="mt-6 space-y-4">
+            <h1 class="text-4xl font-bold text-coffee md:text-5xl">
+              <span class="sr-only">Groundwork enquiry</span>
+              <img src="assets/Groundwork text.png" alt="Groundwork wordmark" class="brand-wordmark mx-auto" />
+            </h1>
+            <p class="text-lg text-neutral-700">
+              Tell us about your learners, café or organisation and we’ll follow up with training options within two working days.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="mx-auto max-w-4xl px-6 py-20">
+          <div class="mb-10 space-y-4">
+            <h2 class="text-3xl font-bold text-coffee md:text-4xl">Tell us about your group / café / school</h2>
+            <p class="text-lg text-neutral-700">
+              Share a few details and we’ll tailor a training or partnership package that fits your young people and your coffee setup.
+            </p>
+          </div>
+          <form id="enquiryForm" class="space-y-6">
+            <div class="grid gap-6 md:grid-cols-2">
+              <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+                Name
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+                />
+              </label>
+              <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+                />
+              </label>
+            </div>
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              Business / school name
+              <input
+                type="text"
+                name="organisation"
+                required
+                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+              />
+            </label>
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              What are you looking for?
+              <select
+                name="enquiryType"
+                required
+                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+              >
+                <option value="">Select an option</option>
+                <option>Barista training for young people</option>
+                <option>School/college partnership</option>
+                <option>Work placement / employer route</option>
+                <option>Equipment / coffee setup</option>
+              </select>
+            </label>
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              Are you interested in work placement for trainees?
+              <select
+                name="placementInterest"
+                required
+                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+              >
+                <option value="">Select yes or no</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              Message / details
+              <textarea
+                name="message"
+                rows="4"
+                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+                placeholder="Tell us about your learners, timeline or any support you need"
+              ></textarea>
+            </label>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-full bg-coffee px-6 py-3 text-sm font-semibold text-white shadow transition hover:-translate-y-0.5 hover:shadow-hover"
+            >
+              Submit enquiry
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      function highlightActiveNav() {
+        const pageKey = document.body.dataset.page;
+        if (!pageKey) return;
+        const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
+        navLinks.forEach((link) => {
+          const targets = (link.dataset.page || '').split(' ');
+          if (targets.includes(pageKey)) {
+            link.classList.add('text-accent');
+          } else {
+            link.classList.remove('text-accent');
+          }
+        });
+      }
+
+      function loadPartial(id, url, callback) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((html) => {
+            const container = document.getElementById(id);
+            if (container) {
+              container.innerHTML = html;
+            }
+            if (typeof callback === 'function') {
+              callback();
+            }
+          });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
+        loadPartial('footer-placeholder', 'footer.html');
+        const form = document.getElementById('enquiryForm');
+        if (form) {
+          form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Thanks — Groundwork will be in touch.');
+            form.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
