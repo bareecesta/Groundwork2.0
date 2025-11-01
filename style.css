@@ -1,0 +1,35 @@
+body {
+  font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #22160d;
+}
+
+.brand-title {
+  font-family: 'Coco Gothic', 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.brand-wordmark {
+  max-width: 18rem;
+  width: 100%;
+}
+
+.brand-wordmark--small {
+  max-width: 12rem;
+  width: 100%;
+}
+
+.logo-pop {
+  animation: popUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
