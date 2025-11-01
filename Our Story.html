@@ -36,25 +36,54 @@
     <div id="nav-placeholder"></div>
 
     <main>
-      <!-- HERO (kept light) -->
-      <section class="bg-cream/60">
-        <div class="mx-auto max-w-4xl px-6 py-20 text-center">
-          <span
-            class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
-          >
-            About Groundwork
-          </span>
-          <div class="mt-6 space-y-4">
-            <h1 class="text-4xl font-bold text-coffee md:text-5xl">
-              <span class="sr-only">Groundwork for baristas</span>
-              <img src="assets/groundworktexticon.png" alt="Groundwork" class="brand-wordmark mx-auto" />
-            </h1>
-            <p class="text-lg text-neutral-700">
-              We’re a social enterprise using coffee to create pathways into meaningful work for young people.
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- HERO / INTRO -->
+<section class="bg-cream/60">
+  <div class="mx-auto flex max-w-6xl flex-col-reverse items-center gap-12 px-6 py-20 md:flex-row">
+    
+    <!-- LEFT: TEXT -->
+    <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+      <span
+        class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
+      >
+        About Groundwork
+      </span>
+
+      <img
+        src="assets/groundworktexticon.png"
+        alt="Groundwork"
+        class="mx-auto md:mx-0 h-14 md:h-16"
+      />
+
+      <h1 class="text-3xl font-bold text-coffee md:text-4xl">
+        Brewing opportunity, one cup at a time
+      </h1>
+
+      <p class="text-lg text-neutral-700 leading-relaxed">
+        We’re a social enterprise using coffee as a pathway into meaningful employment for young people. 
+        Through training, mentoring, and real-world hospitality experience, we turn potential into opportunity.
+      </p>
+
+      <a
+        href="contact.html#enquiryForm"
+        class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div class="w-full md:w-1/2">
+      <div class="rounded-3xl bg-white p-6 shadow-xl">
+        <img
+          src="assets/workflow.png"
+          alt="Barista training workflow"
+          class="mx-auto w-full rounded-2xl"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
 
       <!-- DARK BAND: Why we exist + mission -->
       <section class="bg-[#5a2b10] text-white">
