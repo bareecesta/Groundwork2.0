@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Groundwork — Social Enterprise Barista Training</title>
+    <link rel="icon" type="image/png" href="assets/Stickers (3).png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: '#4a1f0b',
+              cream: '#e8dfcc',
+              accent: '#f97316',
+            },
+            fontFamily: {
+              figtree: ['Figtree', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              hover: '0 12px 24px -12px rgba(74, 31, 11, 0.25)',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body data-page="about" class="bg-white text-black">
+    <div id="nav-placeholder"></div>
+
+    <main>
+      <section class="bg-cream/60">
+        <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+          <span class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow">
+            About Groundwork
+          </span>
+          <div class="mt-6 space-y-4">
+            <h1 class="text-4xl font-bold text-coffee md:text-5xl">
+              <span class="sr-only">Groundwork for young baristas</span>
+              <img src="assets/Groundwork text.png" alt="Groundwork wordmark" class="brand-wordmark mx-auto" />
+            </h1>
+            <p class="text-lg text-neutral-700">
+              We are a social enterprise that uses coffee as a pathway into meaningful employment for 16–24 year olds.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="mx-auto max-w-5xl space-y-10 px-6 py-20">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold text-coffee md:text-4xl">Why we exist</h2>
+            <p class="text-neutral-700">
+              Too many young people with potential are locked out of hospitality careers. Groundwork changes that by offering barista training that feels like the job, not the classroom, backed up with mentors who have stood behind the machine.
+            </p>
+            <p class="text-neutral-700">
+              We focus on young adults still in school, transitioning out of education or currently out of work. By connecting them with supportive employers, we help each trainee move from first shot to first shift.
+            </p>
+          </div>
+
+          <div class="rounded-3xl bg-cream/70 p-10 shadow-lg">
+            <p class="text-xl font-semibold text-coffee">
+              “Our mission: to create routes into meaningful hospitality work for young people through barista training, mentoring and employer partnerships.”
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-coffee md:text-4xl">How we work</h2>
+            <div class="grid gap-8 md:grid-cols-2">
+              <div class="space-y-3 rounded-3xl border border-neutral-200 p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-coffee">Training with purpose</h3>
+                <p class="text-neutral-700">
+                  Every session blends specialty coffee standards with confidence-building exercises. Trainees leave with the technical skills cafés demand and the self-belief to thrive in service environments.
+                </p>
+              </div>
+              <div class="space-y-3 rounded-3xl border border-neutral-200 p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-coffee">Mentoring that sticks</h3>
+                <p class="text-neutral-700">
+                  Our coaches stay close before, during and after placements. They help young people navigate expectations, communicate with managers and keep growing long after the training ends.
+                </p>
+              </div>
+              <div class="space-y-3 rounded-3xl border border-neutral-200 p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-coffee">Employers that care</h3>
+                <p class="text-neutral-700">
+                  We partner with cafés and hospitality brands that see beyond the CV. Together, we shape placements that offer real responsibility and future hiring opportunities.
+                </p>
+              </div>
+              <div class="space-y-3 rounded-3xl border border-neutral-200 p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-coffee">Support for schools</h3>
+                <p class="text-neutral-700">
+                  Schools, colleges and pupil referral units invite us in to run on-site programmes, building bridges between education and employment for their learners.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      function highlightActiveNav() {
+        const pageKey = document.body.dataset.page;
+        if (!pageKey) return;
+        const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
+        navLinks.forEach((link) => {
+          const targets = (link.dataset.page || '').split(' ');
+          if (targets.includes(pageKey)) {
+            link.classList.add('text-accent');
+          } else {
+            link.classList.remove('text-accent');
+          }
+        });
+      }
+
+      function loadPartial(id, url, callback) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((html) => {
+            const container = document.getElementById(id);
+            if (container) {
+              container.innerHTML = html;
+            }
+            if (typeof callback === 'function') {
+              callback();
+            }
+          });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
+        loadPartial('footer-placeholder', 'footer.html');
+      });
+    </script>
+  </body>
+</html>
