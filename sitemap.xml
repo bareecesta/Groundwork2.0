@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <!-- Groundwork Coffee Sitemap -->
+  <!-- Optimised for Google + ChatGPT/AI crawlers -->
+
   <url>
     <loc>https://groundworkcoffee.co.uk/</loc>
+    <lastmod>2025-11-03</lastmod>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
   <url>
     <loc>https://groundworkcoffee.co.uk/Our%20Story.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://groundworkcoffee.co.uk/solutions.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
   <url>
     <loc>https://groundworkcoffee.co.uk/contact.html</loc>
-    <priority>0.7</priority>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Optional: AI summary page (recommended if you add one) -->
+  <url>
+    <loc>https://groundworkcoffee.co.uk/ai-summary.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
 </urlset>
