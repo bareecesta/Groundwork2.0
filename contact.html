@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Groundwork — Enquire About Training</title>
-    <link rel="icon" type="image/png" href="assets//groundwork logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/groundwork logo.png" />
+
+    <!-- Fonts + Styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind setup -->
     <script>
       window.tailwind = window.tailwind || {};
       window.tailwind.config = {
@@ -32,19 +38,28 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body data-page="contact" class="bg-white text-black">
+
+  <body data-page="contact" class="bg-white text-black font-figtree">
+    <!-- Navigation -->
     <div id="nav-placeholder"></div>
 
     <main>
+      <!-- HERO -->
       <section class="bg-cream/60">
         <div class="mx-auto max-w-4xl px-6 py-20 text-center">
-          <span class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow">
+          <span
+            class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
+          >
             Contact Groundwork
           </span>
           <div class="mt-6 space-y-4">
             <h1 class="text-4xl font-bold text-coffee md:text-5xl">
               <span class="sr-only">Groundwork enquiry</span>
-              <img src="assets/groundwork logo.png" alt="Groundwork" class="brand-wordmark mx-auto" />
+              <img
+                src="assets/groundwork logo.png"
+                alt="Groundwork icon logo"
+                class="mx-auto h-16 w-16 md:h-20 md:w-20"
+              />
             </h1>
             <p class="text-lg text-neutral-700">
               Tell us about your learners, café or organisation and we’ll follow up with training options within two working days.
@@ -53,14 +68,18 @@
         </div>
       </section>
 
+      <!-- FORM -->
       <section class="bg-white">
         <div class="mx-auto max-w-4xl px-6 py-20">
           <div class="mb-10 space-y-4">
-            <h2 class="text-3xl font-bold text-coffee md:text-4xl">Tell us about your group / café / school</h2>
+            <h2 class="text-3xl font-bold text-coffee md:text-4xl">
+              Tell us about your group / café / school
+            </h2>
             <p class="text-lg text-neutral-700">
               Share a few details and we’ll tailor a training or partnership package that fits your young people and your coffee setup.
             </p>
           </div>
+
           <form id="enquiryForm" class="space-y-6">
             <div class="grid gap-6 md:grid-cols-2">
               <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
@@ -72,6 +91,7 @@
                   class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
                 />
               </label>
+
               <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
                 Email
                 <input
@@ -82,6 +102,7 @@
                 />
               </label>
             </div>
+
             <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
               Business / school name
               <input
@@ -91,6 +112,7 @@
                 class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
               />
             </label>
+
             <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
               What are you looking for?
               <select
@@ -105,6 +127,7 @@
                 <option>Equipment / coffee setup</option>
               </select>
             </label>
+
             <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
               Are you interested in work placement for trainees?
               <select
@@ -117,6 +140,7 @@
                 <option>No</option>
               </select>
             </label>
+
             <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
               Message / details
               <textarea
@@ -126,9 +150,10 @@
                 placeholder="Tell us about your learners, timeline or any support you need"
               ></textarea>
             </label>
+
             <button
               type="submit"
-              class="inline-flex items-center justify-center rounded-full bg-coffee px-6 py-3 text-sm font-semibold text-coffee shadow transition hover:-translate-y-0.5 hover:shadow-hover"
+              class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
             >
               Submit enquiry
             </button>
@@ -137,8 +162,10 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- JS -->
     <script>
       function highlightActiveNav() {
         const pageKey = document.body.dataset.page;
@@ -146,26 +173,20 @@
         const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
         navLinks.forEach((link) => {
           const targets = (link.dataset.page || '').split(' ');
-          if (targets.includes(pageKey)) {
-            link.classList.add('text-accent');
-          } else {
-            link.classList.remove('text-accent');
-          }
+          if (targets.includes(pageKey)) link.classList.add('text-accent');
+          else link.classList.remove('text-accent');
         });
       }
 
       function loadPartial(id, url, callback) {
         fetch(url)
-          .then((response) => response.text())
+          .then((res) => res.text())
           .then((html) => {
             const container = document.getElementById(id);
-            if (container) {
-              container.innerHTML = html;
-            }
-            if (typeof callback === 'function') {
-              callback();
-            }
-          });
+            if (container) container.innerHTML = html;
+            if (typeof callback === 'function') callback();
+          })
+          .catch((err) => console.error('Error loading partial:', url, err));
       }
 
       document.addEventListener('DOMContentLoaded', () => {
@@ -173,8 +194,8 @@
         loadPartial('footer-placeholder', 'footer.html');
         const form = document.getElementById('enquiryForm');
         if (form) {
-          form.addEventListener('submit', (event) => {
-            event.preventDefault();
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
             alert('Thanks — Groundwork will be in touch.');
             form.reset();
           });
@@ -183,3 +204,4 @@
     </script>
   </body>
 </html>
+
