@@ -232,5 +232,90 @@
         loadPartial('footer-placeholder', 'footer.html');
       });
     </script>
+    <script>
+  // Load nav/footer partials
+  function loadPartial(id, url, callback) {
+    fetch(url)
+      .then(res => res.text())
+      .then(html => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+        if (typeof callback === 'function') callback();
+      })
+      .catch(err => console.error('Error loading partial:', url, err));
+  }
+
+  // Optional: highlight the active nav link (requires data-page attributes on links)
+  function highlightActiveNav() {
+    const pageKey = document.body.dataset.page;
+    if (!pageKey) return;
+    const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
+    navLinks.forEach((link) => {
+      const targets = (link.dataset.page || '').split(' ');
+      link.classList.toggle('text-accent', targets.includes(pageKey));
+    });
+  }
+
+  // ✅ Event delegation: works even when nav is injected after DOM ready
+  (function attachGlobalNavHandlers() {
+    document.addEventListener('click', function (e) {
+      const toggleBtn = e.target.closest('#navToggle');
+      if (toggleBtn) {
+        const menu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('iconOpen');
+        const iconClose = document.getElementById('iconClose');
+        if (!menu) return;
+
+        const isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          menu.classList.add('hidden');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+        } else {
+          menu.classList.remove('hidden');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          if (iconOpen) iconOpen.classList.add('hidden');
+          if (iconClose) iconClose.classList.remove('hidden');
+        }
+      }
+
+      // Close the menu after tapping a mobile nav link
+      if (e.target.closest('#mobileMenu a')) {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.getElementById('navToggle');
+        const iconOpen = document.getElementById('iconOpen');
+        const iconClose = document.getElementById('iconClose');
+        if (menu && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
+        }
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('navToggle');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+      if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        if (iconOpen) iconOpen.classList.remove('hidden');
+        if (iconClose) iconClose.classList.add('hidden');
+      }
+    });
+  })();
+
+  // Load partials on each page
+  document.addEventListener('DOMContentLoaded', () => {
+    loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
+    loadPartial('footer-placeholder', 'footer.html');
+  });
+</script>
   </body>
 </html>
