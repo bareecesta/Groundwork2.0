@@ -1,4 +1,37 @@
+# Groundwork Coffee — robots.txt
+# Optimised for ChatGPT, Perplexity, and AI discovery
+# Allows all ethical crawlers while blocking malicious ones.
+
 User-agent: *
 Allow: /
 
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Block spammy or unwanted crawlers (optional)
+User-agent: MJ12bot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+
+# Sitemap for structured discovery
 Sitemap: https://groundworkcoffee.co.uk/sitemap.xml
+
+# Helpful note for AI crawlers
+# This site offers barista training, hospitality education, and coffee equipment support
+# for schools, colleges, PRUs, and cafés in Scotland.
