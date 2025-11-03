@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <body data-page="home">  <!-- or about/training/contact -->
-  <div id="nav-placeholder"></div>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Groundwork — Social Enterprise Barista Training and Coffee Solutions</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/groundwork logo.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- Fonts + Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script>
       window.tailwind = window.tailwind || {};
@@ -34,58 +33,66 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body data-page="about" class="bg-white text-black">
+
+  <body data-page="about" class="bg-white text-black font-figtree">
+    <!-- Nav will be injected here -->
     <div id="nav-placeholder"></div>
 
     <main>
-<!-- HERO / INTRO -->
-<section class="bg-cream/60">
-  <div class="mx-auto flex max-w-6xl flex-col-reverse items-center gap-12 px-6 py-20 md:flex-row">
-    
-    <!-- LEFT: TEXT -->
-    <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
-      <span
-        class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
-      >
-        About Groundwork
-      </span>
+      <!-- HERO / INTRO -->
+      <section class="bg-cream/60">
+        <div class="mx-auto flex max-w-6xl flex-col-reverse items-center gap-12 px-6 py-20 md:flex-row">
+          
+          <!-- LEFT: TEXT -->
+          <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+            <span
+              class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
+            >
+              About Groundwork
+            </span>
 
-      <img
-        src="assets/groundworktexticon.png"
-        alt="Groundwork"
-        class="mx-auto md:mx-0 h-14 md:h-16"
-      />
+            <img
+              src="assets/groundworktexticon.png"
+              alt="Groundwork"
+              class="mx-auto md:mx-0 h-14 md:h-16"
+              loading="lazy"
+              decoding="async"
+            />
 
-      <h1 class="text-3xl font-bold text-coffee md:text-4xl">
-        Brewing opportunity, one cup at a time
-      </h1>
+            <h1 class="text-3xl font-bold text-coffee md:text-4xl">
+              Brewing opportunity, one cup at a time
+            </h1>
 
-      <p class="text-lg text-neutral-700 leading-relaxed">
-        We’re a social enterprise using coffee as a pathway into meaningful employment for young people. 
-        Through training, mentoring, and real-world hospitality experience, we turn potential into opportunity.
-      </p>
+            <p class="text-lg text-neutral-700 leading-relaxed">
+              We’re a social enterprise using coffee as a pathway into meaningful employment for young people. 
+              Through training, mentoring, and real-world hospitality experience, we turn potential into opportunity.
+            </p>
 
-      <a
-        href="contact.html#enquiryForm"
-        class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
-      >
-        Get in touch
-      </a>
-    </div>
+            <a
+              href="contact.html#enquiryForm"
+              class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
+            >
+              Get in touch
+            </a>
+          </div>
 
-    <!-- RIGHT: IMAGE -->
-    <div class="w-full md:w-1/2">
-      <div class="rounded-3xl bg-white p-6 shadow-xl">
-        <img
-          src="assets/workflow.png"
-          alt="Barista training workflow"
-          class="mx-auto w-full rounded-2xl"
-        />
-      </div>
-    </div>
+          <!-- RIGHT: IMAGE -->
+          <div class="w-full md:w-1/2">
+            <div class="rounded-3xl bg-white p-6 shadow-xl">
+              <!-- Ensure the filename EXACTLY matches (GitHub Pages is case-sensitive).
+                   If your file is 'workflow.png' in /assets, this will load. -->
+              <img
+                src="assets/workflow.png"
+                alt="Barista training workflow"
+                class="mx-auto w-full rounded-2xl"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       <!-- DARK BAND: Why we exist + mission -->
       <section class="bg-[#5a2b10] text-white">
@@ -160,9 +167,12 @@
       </section>
     </main>
 
+    <!-- Footer will be injected here -->
     <div id="footer-placeholder"></div>
 
+    <!-- PAGE SCRIPTS -->
     <script>
+      // Highlight active nav link (optional helper you were using)
       function highlightActiveNav() {
         const pageKey = document.body.dataset.page;
         if (!pageKey) return;
@@ -177,6 +187,7 @@
         });
       }
 
+      // Load partials (nav/footer)
       function loadPartial(id, url, callback) {
         fetch(url)
           .then((response) => response.text())
@@ -185,14 +196,39 @@
             if (container) {
               container.innerHTML = html;
             }
-            if (typeof callback === 'function') {
-              callback();
-            }
-          });
+            if (typeof callback === 'function') callback();
+          })
+          .catch((err) => console.error('Error loading partial:', url, err));
+      }
+
+      // If you're using the hamburger nav in nav.html, init it here after injection:
+      function initNavToggle() {
+        const btn = document.getElementById('navToggle');
+        const menu = document.getElementById('mobileMenu');
+        const iconOpen = document.getElementById('iconOpen');
+        const iconClose = document.getElementById('iconClose');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', () => {
+          const open = !menu.classList.contains('hidden');
+          if (open) {
+            menu.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            if (iconOpen) iconOpen.classList.remove('hidden');
+            if (iconClose) iconClose.classList.add('hidden');
+          } else {
+            menu.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+            if (iconOpen) iconOpen.classList.add('hidden');
+            if (iconClose) iconClose.classList.remove('hidden');
+          }
+        });
       }
 
       document.addEventListener('DOMContentLoaded', () => {
-        loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
+        loadPartial('nav-placeholder', 'nav.html', () => {
+          initNavToggle();
+          if (typeof highlightActiveNav === 'function') highlightActiveNav();
+        });
         loadPartial('footer-placeholder', 'footer.html');
       });
     </script>
