@@ -13,14 +13,12 @@
         class="inline-flex items-center justify-center rounded-md p-2 text-[#5a2b10] hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]"
         aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
         <!-- Hamburger icon -->
-        <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
         <!-- Close icon -->
-        <svg id="iconClose" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg id="iconClose" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -31,31 +29,31 @@
     <nav id="mobileMenu" class="hidden px-4 pb-4">
       <ul class="flex flex-col gap-2 text-base font-medium text-[#5a2b10]">
         <li>
-          <a href="index.html"
+          <a href="index.html" data-page="home"
              class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
             Home
           </a>
         </li>
         <li>
-          <a href="Our Story.html"
+          <a href="Our Story.html" data-page="about"
              class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
             Our Story
           </a>
         </li>
         <li>
-          <a href="solutions.html#training"
+          <a href="solutions.html#training" data-page="training"
              class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
             Solutions
           </a>
         </li>
         <li>
-          <a href="solutions.html#partners"
+          <a href="solutions.html#partners" data-page="partners"
              class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
             Work With Us
           </a>
         </li>
         <li>
-          <a href="contact.html"
+          <a href="contact.html" data-page="contact"
              class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
             Contact
           </a>
@@ -74,89 +72,27 @@
 
     <!-- Inline nav links -->
     <nav class="flex flex-wrap items-center justify-center gap-6 text-base md:text-lg font-medium text-[#5a2b10]">
-      <a href="index.html"
+      <a href="index.html" data-page="home"
          class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
         Home
       </a>
-      <a href="Our Story.html"
+      <a href="Our Story.html" data-page="about"
          class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
         Our Story
       </a>
-      <a href="solutions.html#training"
+      <a href="solutions.html#training" data-page="training"
          class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
         Solutions
       </a>
-      <a href="solutions.html#partners"
+      <a href="solutions.html#partners" data-page="partners"
          class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
         Work With Us
       </a>
-      <a href="contact.html"
+      <a href="contact.html" data-page="contact"
          class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
         Contact
       </a>
     </nav>
   </div>
-
-  <!-- Tiny script to toggle mobile menu -->
-  <script>
-  // Highlight the active nav link
-  function highlightActiveNav() {
-    const pageKey = document.body.dataset.page;
-    if (!pageKey) return;
-    const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
-    navLinks.forEach((link) => {
-      const targets = (link.dataset.page || '').split(' ');
-      if (targets.includes(pageKey)) {
-        link.classList.add('text-accent');
-      } else {
-        link.classList.remove('text-accent');
-      }
-    });
-  }
-
-  // Load nav or footer HTML partials
-  function loadPartial(id, url, callback) {
-    fetch(url)
-      .then((response) => response.text())
-      .then((html) => {
-        const container = document.getElementById(id);
-        if (container) container.innerHTML = html;
-        if (typeof callback === 'function') callback();
-      })
-      .catch((err) => console.error('Error loading partial:', url, err));
-  }
-
-  // Initialize mobile nav toggle
-  function initNavToggle() {
-    const btn = document.getElementById('navToggle');
-    const menu = document.getElementById('mobileMenu');
-    const iconOpen = document.getElementById('iconOpen');
-    const iconClose = document.getElementById('iconClose');
-    if (!btn || !menu) return;
-
-    btn.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden');
-      if (isOpen) {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-        if (iconOpen) iconOpen.classList.remove('hidden');
-        if (iconClose) iconClose.classList.add('hidden');
-      } else {
-        menu.classList.remove('hidden');
-        btn.setAttribute('aria-expanded', 'true');
-        if (iconOpen) iconOpen.classList.add('hidden');
-        if (iconClose) iconClose.classList.remove('hidden');
-      }
-    });
-  }
-
-  // Load everything once DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
-    loadPartial('nav-placeholder', 'nav.html', () => {
-      initNavToggle(); // ✅ activate mobile nav after nav loads
-      highlightActiveNav();
-    });
-    loadPartial('footer-placeholder', 'footer.html');
-  });
-</script>
 </header>
+
