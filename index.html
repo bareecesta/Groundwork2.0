@@ -32,14 +32,15 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body data-page="home" class="bg-white text-black">
+  <body data-page="home" class="bg-white text-black font-figtree">
     <div id="nav-placeholder"></div>
 
     <main>
       <!-- HERO -->
       <section class="bg-cream/60">
         <div class="mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 py-20 md:flex-row">
-          <div class="w-full space-y-6 md:w-1/2">
+          <!-- LEFT: text block -->
+          <div class="w-full md:w-1/2 flex flex-col items-start space-y-6">
             <!-- badge -->
             <span
               class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
@@ -47,24 +48,25 @@
               Coffee. Skills. Opportunity.
             </span>
 
-            <!-- logo/text -->
-            <div class="space-y-4">
-              <h1 class="text-4xl font-bold text-coffee md:text-5xl">
+            <!-- wordmark + paragraph -->
+            <div class="space-y-4 w-full">
+              <h1 class="text-4xl font-bold text-coffee md:text-5xl leading-none">
                 <span class="sr-only">Groundwork for young baristas.</span>
                 <img
                   src="assets/groundworktexticon.png"
                   alt="Groundwork"
-                  class="block h-16 w-auto md:h-20"
+                  class="block h-16 w-auto md:h-20 -ml-[2px]"  <!-- keeps left edges aligned -->
                 />
               </h1>
-              <p class="text-lg text-neutral-700">
+
+              <p class="text-lg text-neutral-700 max-w-prose">
                 Groundwork trains young adults in specialty coffee and wraps mentoring around every pour — building
                 confidence that leads to real work in cafés, events and hospitality.
               </p>
             </div>
 
             <!-- buttons -->
-            <div class="flex flex-col gap-3 sm:flex-row">
+            <div class="flex flex-col gap-3 sm:flex-row self-start">
               <a
                 href="contact.html#enquiryForm"
                 class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
@@ -74,14 +76,14 @@
 
               <a
                 href="solutions.html#partners"
-                class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white border border-[#5a2b10] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
+                class="inline-flex items-center justify-center rounded-full border border-[#5a2b10] bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
               >
                 Partner with us
               </a>
             </div>
           </div>
 
-          <!-- hero image -->
+          <!-- RIGHT: hero image -->
           <div class="w-full md:w-1/2">
             <div class="rounded-3xl bg-white p-8 shadow-xl">
               <img src="assets/groundwork logo.png" alt="Groundwork coffee hand logo" class="logo-pop mx-auto w-64" />
@@ -90,7 +92,7 @@
         </div>
       </section>
 
-      <!-- OUR PATHWAY (now brown + inverted) -->
+      <!-- OUR PATHWAY (brown + inverted) -->
       <section class="bg-[#5a2b10] text-white">
         <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
           <div class="space-y-6">
@@ -154,7 +156,7 @@
         </div>
       </section>
 
-      <!-- rest of your sections stay the same -->
+      <!-- rest of your sections -->
       <section class="bg-cream/60">
         <!-- ... -->
       </section>
@@ -186,12 +188,8 @@
           .then((response) => response.text())
           .then((html) => {
             const container = document.getElementById(id);
-            if (container) {
-              container.innerHTML = html;
-            }
-            if (typeof callback === 'function') {
-              callback();
-            }
+            if (container) container.innerHTML = html;
+            if (typeof callback === 'function') callback();
           });
       }
 
