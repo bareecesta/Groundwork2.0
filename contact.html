@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://groundworkcoffee.co.uk/contact.html" />
 
-  <!-- ✅ Open Graph (Facebook / LinkedIn) -->
+  <!-- ✅ Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://groundworkcoffee.co.uk/contact.html" />
@@ -21,30 +21,27 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- ✅ Twitter / X -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact Groundwork Coffee — Barista Training for Schools, Colleges & Cafés in Scotland" />
   <meta name="twitter:description" content="Contact Groundwork Coffee to discuss training, partnerships and café solutions across Scotland and the UK." />
   <meta name="twitter:image" content="https://groundworkcoffee.co.uk/assets/groundwork-logo-og.png" />
 
-  <!-- ✅ AI / ChatGPT Discovery Tags -->
+  <!-- AI -->
   <meta name="keywords" content="contact Groundwork Coffee, barista training Scotland, coffee training Scotland, school coffee programme, café partnerships Scotland, Reece Jack barista, hospitality education Scotland" />
   <meta name="ai-topic" content="contact Groundwork Coffee for barista training and café partnerships across Scotland" />
   <meta name="ai-summary" content="Contact Groundwork Coffee to arrange barista training, coffee education and hospitality partnerships for schools, colleges and cafés across Scotland." />
   <meta name="ai-keywords" content="barista training Scotland, Scottish hospitality partnerships, café coffee training Scotland, Groundwork Coffee contact, Reece Jack training" />
 
-  <!-- ✅ Icons -->
+  <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/groundwork logo.png" />
   <link rel="apple-touch-icon" href="assets/groundwork logo.png" />
 
-  <!-- ✅ Fonts + Styles -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Fonts + Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- ✅ Tailwind setup -->
+  <!-- Tailwind -->
   <script>
     window.tailwind = window.tailwind || {};
     window.tailwind.config = {
@@ -67,7 +64,7 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ Structured Data for Google / AI -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,255 +94,188 @@
   </script>
 </head>
 
-  <body data-page="contact" class="bg-white text-black font-figtree">
-    <!-- Navigation -->
-    <div id="nav-placeholder"></div>
+<body data-page="contact" class="bg-white text-black font-figtree">
 
-    <main>
-      <!-- HERO -->
-      <section class="bg-cream/60">
-        <div class="mx-auto max-w-4xl px-6 py-20 text-center">
-          <span
-            class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="bg-cream/60">
+      <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+        <span class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow">
+          Contact Groundwork
+        </span>
+        <div class="mt-6 space-y-4">
+          <h1 class="text-4xl font-bold text-coffee md:text-5xl">
+            <img src="assets/groundwork logo.png" alt="Groundwork icon logo" class="mx-auto h-16 w-16 md:h-20 md:w-20" />
+          </h1>
+          <p class="text-lg text-neutral-700">
+            Tell us about your learners, café or organisation and we’ll follow up with training options within two working days.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-4xl px-6 py-20">
+        <div class="mb-10 space-y-4">
+          <h2 class="text-3xl font-bold text-coffee md:text-4xl">
+            Tell us about your group / café / school
+          </h2>
+          <p class="text-lg text-neutral-700">
+            Share a few details and we’ll tailor a training or partnership package that fits your young people and your coffee setup.
+          </p>
+        </div>
+
+        <!-- ✅ FORM NOW SENDS EMAIL TO: bareecesta@gmail.com -->
+        <form
+          id="enquiryForm"
+          class="space-y-6"
+          action="https://formsubmit.co/bareecesta@gmail.com"
+          method="POST"
+        >
+
+          <!-- Hidden settings for email formatting -->
+          <input type="hidden" name="_subject" value="New Groundwork enquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              Name
+              <input type="text" name="name" required class="w-full rounded-2xl border border-neutral-200 px-4 py-3" />
+            </label>
+
+            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+              Email
+              <input type="email" name="email" required class="w-full rounded-2xl border border-neutral-200 px-4 py-3" />
+            </label>
+          </div>
+
+          <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+            Business / school name
+            <input type="text" name="organisation" required class="w-full rounded-2xl border border-neutral-200 px-4 py-3" />
+          </label>
+
+          <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+            What are you looking for?
+            <select name="enquiryType" required class="w-full rounded-2xl border border-neutral-200 px-4 py-3">
+              <option value="">Select an option</option>
+              <option>Barista training for young people</option>
+              <option>School/college partnership</option>
+              <option>Work placement / employer route</option>
+              <option>Equipment / coffee setup</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+            Are you interested in work placement for trainees?
+            <select name="placementInterest" required class="w-full rounded-2xl border border-neutral-200 px-4 py-3">
+              <option value="">Select yes or no</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
+            Message / details
+            <textarea name="message" rows="4" class="w-full rounded-2xl border border-neutral-200 px-4 py-3" placeholder="Tell us about your learners, timeline or any support you need"></textarea>
+          </label>
+
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
           >
-            Contact Groundwork
-          </span>
-          <div class="mt-6 space-y-4">
-            <h1 class="text-4xl font-bold text-coffee md:text-5xl">
-              <span class="sr-only">Groundwork enquiry</span>
-              <img
-                src="assets/groundwork logo.png"
-                alt="Groundwork icon logo"
-                class="mx-auto h-16 w-16 md:h-20 md:w-20"
-              />
-            </h1>
-            <p class="text-lg text-neutral-700">
-              Tell us about your learners, café or organisation and we’ll follow up with training options within two working days.
-            </p>
-          </div>
-        </div>
-      </section>
+            Submit enquiry
+          </button>
+        </form>
+      </div>
+    </section>
 
-      <!-- FORM -->
-      <section class="bg-white">
-        <div class="mx-auto max-w-4xl px-6 py-20">
-          <div class="mb-10 space-y-4">
-            <h2 class="text-3xl font-bold text-coffee md:text-4xl">
-              Tell us about your group / café / school
-            </h2>
-            <p class="text-lg text-neutral-700">
-              Share a few details and we’ll tailor a training or partnership package that fits your young people and your coffee setup.
-            </p>
-          </div>
+  </main>
 
-          <form id="enquiryForm" class="space-y-6">
-            <div class="grid gap-6 md:grid-cols-2">
-              <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-                Name
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-                />
-              </label>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
 
-              <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-                Email
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-                />
-              </label>
-            </div>
+  <!-- JS: NAV + FOOTER ONLY (no form interception) -->
+  <script>
+    function loadPartial(id, url, callback) {
+      fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const el = document.getElementById(id);
+          if (el) el.innerHTML = html;
+          if (typeof callback === 'function') callback();
+        })
+        .catch(err => console.error('Error loading partial:', url, err));
+    }
 
-            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-              Business / school name
-              <input
-                type="text"
-                name="organisation"
-                required
-                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-              />
-            </label>
+    function highlightActiveNav() {
+      const pageKey = document.body.dataset.page;
+      if (!pageKey) return;
+      const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
+      navLinks.forEach((link) => {
+        const targets = (link.dataset.page || '').split(' ');
+        link.classList.toggle('text-accent', targets.includes(pageKey));
+      });
+    }
 
-            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-              What are you looking for?
-              <select
-                name="enquiryType"
-                required
-                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-              >
-                <option value="">Select an option</option>
-                <option>Barista training for young people</option>
-                <option>School/college partnership</option>
-                <option>Work placement / employer route</option>
-                <option>Equipment / coffee setup</option>
-              </select>
-            </label>
+    // Mobile nav behaviour
+    (function attachGlobalNavHandlers() {
+      document.addEventListener('click', function (e) {
+        const toggleBtn = e.target.closest('#navToggle');
+        if (toggleBtn) {
+          const menu = document.getElementById('mobileMenu');
+          const iconOpen = document.getElementById('iconOpen');
+          const iconClose = document.getElementById('iconClose');
 
-            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-              Are you interested in work placement for trainees?
-              <select
-                name="placementInterest"
-                required
-                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-              >
-                <option value="">Select yes or no</option>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </label>
+          const isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          toggleBtn.setAttribute('aria-expanded', !isOpen);
+          iconOpen?.classList.toggle('hidden');
+          iconClose?.classList.toggle('hidden');
+        }
 
-            <label class="flex flex-col gap-2 text-sm font-medium text-coffee">
-              Message / details
-              <textarea
-                name="message"
-                rows="4"
-                class="w-full rounded-2xl border border-neutral-200 px-4 py-3 text-base text-neutral-800 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
-                placeholder="Tell us about your learners, timeline or any support you need"
-              ></textarea>
-            </label>
-
-            <button
-              type="submit"
-              class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
-            >
-              Submit enquiry
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <!-- JS -->
-    <script>
-      function highlightActiveNav() {
-        const pageKey = document.body.dataset.page;
-        if (!pageKey) return;
-        const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
-        navLinks.forEach((link) => {
-          const targets = (link.dataset.page || '').split(' ');
-          if (targets.includes(pageKey)) link.classList.add('text-accent');
-          else link.classList.remove('text-accent');
-        });
-      }
-
-      function loadPartial(id, url, callback) {
-        fetch(url)
-          .then((res) => res.text())
-          .then((html) => {
-            const container = document.getElementById(id);
-            if (container) container.innerHTML = html;
-            if (typeof callback === 'function') callback();
-          })
-          .catch((err) => console.error('Error loading partial:', url, err));
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
-        loadPartial('footer-placeholder', 'footer.html');
-        const form = document.getElementById('enquiryForm');
-        if (form) {
-          form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thanks — Groundwork will be in touch.');
-            form.reset();
-          });
+        // Close on link tap
+        if (e.target.closest('#mobileMenu a')) {
+          const menu = document.getElementById('mobileMenu');
+          const btn = document.getElementById('navToggle');
+          const iconOpen = document.getElementById('iconOpen');
+          const iconClose = document.getElementById('iconClose');
+          if (menu && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            btn?.setAttribute('aria-expanded', 'false');
+            iconOpen?.classList.remove('hidden');
+            iconClose?.classList.add('hidden');
+          }
         }
       });
-    </script>
-    <script>
-  // Load nav/footer partials
-  function loadPartial(id, url, callback) {
-    fetch(url)
-      .then(res => res.text())
-      .then(html => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = html;
-        if (typeof callback === 'function') callback();
-      })
-      .catch(err => console.error('Error loading partial:', url, err));
-  }
 
-  // Optional: highlight the active nav link (requires data-page attributes on links)
-  function highlightActiveNav() {
-    const pageKey = document.body.dataset.page;
-    if (!pageKey) return;
-    const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
-    navLinks.forEach((link) => {
-      const targets = (link.dataset.page || '').split(' ');
-      link.classList.toggle('text-accent', targets.includes(pageKey));
-    });
-  }
-
-  // ✅ Event delegation: works even when nav is injected after DOM ready
-  (function attachGlobalNavHandlers() {
-    document.addEventListener('click', function (e) {
-      const toggleBtn = e.target.closest('#navToggle');
-      if (toggleBtn) {
-        const menu = document.getElementById('mobileMenu');
-        const iconOpen = document.getElementById('iconOpen');
-        const iconClose = document.getElementById('iconClose');
-        if (!menu) return;
-
-        const isOpen = !menu.classList.contains('hidden');
-        if (isOpen) {
-          menu.classList.add('hidden');
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          if (iconOpen) iconOpen.classList.remove('hidden');
-          if (iconClose) iconClose.classList.add('hidden');
-        } else {
-          menu.classList.remove('hidden');
-          toggleBtn.setAttribute('aria-expanded', 'true');
-          if (iconOpen) iconOpen.classList.add('hidden');
-          if (iconClose) iconClose.classList.remove('hidden');
+      // Close on ESC
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          const menu = document.getElementById('mobileMenu');
+          const btn = document.getElementById('navToggle');
+          const iconOpen = document.getElementById('iconOpen');
+          const iconClose = document.getElementById('iconClose');
+          if (menu && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            btn?.setAttribute('aria-expanded', 'false');
+            iconOpen?.classList.remove('hidden');
+            iconClose?.classList.add('hidden');
+          }
         }
-      }
+      });
+    })();
 
-      // Close the menu after tapping a mobile nav link
-      if (e.target.closest('#mobileMenu a')) {
-        const menu = document.getElementById('mobileMenu');
-        const btn = document.getElementById('navToggle');
-        const iconOpen = document.getElementById('iconOpen');
-        const iconClose = document.getElementById('iconClose');
-        if (menu && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-          if (iconOpen) iconOpen.classList.remove('hidden');
-          if (iconClose) iconClose.classList.add('hidden');
-        }
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+      loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
+      loadPartial('footer-placeholder', 'footer.html');
     });
+  </script>
 
-    // Close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'Escape') return;
-      const menu = document.getElementById('mobileMenu');
-      const btn = document.getElementById('navToggle');
-      const iconOpen = document.getElementById('iconOpen');
-      const iconClose = document.getElementById('iconClose');
-      if (menu && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-        if (iconOpen) iconOpen.classList.remove('hidden');
-        if (iconClose) iconClose.classList.add('hidden');
-      }
-    });
-  })();
-
-  // Load partials on each page
-  document.addEventListener('DOMContentLoaded', () => {
-    loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
-    loadPartial('footer-placeholder', 'footer.html');
-  });
-</script>
-
-  </body>
+</body>
 </html>
-
