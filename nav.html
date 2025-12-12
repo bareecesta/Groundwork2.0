@@ -2,97 +2,53 @@
   <!-- Mobile top bar -->
   <div class="mx-auto max-w-6xl md:hidden">
     <div class="flex items-center justify-between px-4 py-3">
-      <!-- Brand (mobile, compact) -->
       <a href="index.html" class="flex items-center gap-3" aria-label="Home">
         <img src="assets/groundwork logo.png" alt="Groundwork icon logo" class="h-10 w-10" />
         <img src="assets/groundworktexticon.png" alt="Groundwork text logo" class="h-8" />
       </a>
 
-      <!-- Hamburger button -->
+      <!-- Hamburger -->
       <button id="navToggle"
         class="inline-flex items-center justify-center rounded-md p-2 text-[#5a2b10] hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]"
         aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- Hamburger icon -->
-        <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+
+        <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-        <!-- Close icon -->
-        <svg id="iconClose" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+
+        <svg id="iconClose" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
 
-    <!-- Mobile dropdown menu -->
+    <!-- Mobile dropdown -->
     <nav id="mobileMenu" class="hidden px-4 pb-4">
       <ul class="flex flex-col gap-2 text-base font-medium text-[#5a2b10]">
+
         <li>
           <a href="index.html" data-page="home"
-             class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
+             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Home
           </a>
         </li>
+
         <li>
           <a href="Our Story.html" data-page="about"
-             class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
+             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Our Story
           </a>
         </li>
-        <li>
-          <a href="solutions.html#training" data-page="training"
-             class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-            Solutions
-          </a>
-        </li>
+
         <li>
           <a href="solutions.html#partners" data-page="partners"
-             class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
+             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Work With Us
           </a>
         </li>
+
         <li>
-          <a href="contact.html" data-page="contact"
-             class="block w-full px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-  <!-- Desktop / tablet header -->
-  <div class="mx-auto hidden max-w-6xl flex-col items-center gap-6 px-6 py-8 md:flex">
-    <!-- Logo + wordmark stacked -->
-    <a href="index.html" class="flex flex-col items-center gap-3" aria-label="Home">
-      <img src="assets/groundwork logo.png" alt="Groundwork icon logo" class="h-20 w-20" />
-      <img src="assets/groundworktexticon.png" alt="Groundwork text logo" class="h-14" />
-    </a>
-
-    <!-- Inline nav links -->
-    <nav class="flex flex-wrap items-center justify-center gap-6 text-base md:text-lg font-medium text-[#5a2b10]">
-      <a href="index.html" data-page="home"
-         class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-        Home
-      </a>
-      <a href="Our Story.html" data-page="about"
-         class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-        Our Story
-      </a>
-      <a href="solutions.html#training" data-page="training"
-         class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-        Solutions
-      </a>
-      <a href="solutions.html#partners" data-page="partners"
-         class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-        Work With Us
-      </a>
-      <a href="contact.html" data-page="contact"
-         class="px-4 py-2 rounded-full border border-transparent transition-all duration-300 hover:bg-[#5a2b10] hover:text-white hover:border-[#5a2b10]">
-        Contact
-      </a>
-    </nav>
-  </div>
-</header>
-
+          <a href="coffee-cart.html" data-page="coffee-cart"
+             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
