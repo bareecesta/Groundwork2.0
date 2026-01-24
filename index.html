@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
- <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://groundworkcoffee.co.uk/" />
 
-  <!-- ✅ Open Graph (Facebook / LinkedIn) -->
+  <!-- ✅ Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://groundworkcoffee.co.uk/" />
@@ -21,53 +21,47 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <!-- ✅ Twitter / X -->
+  <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Groundwork Coffee — Barista Training for Schools, Colleges & Cafés in Scotland" />
   <meta name="twitter:description" content="Professional barista training and hospitality pathways designed for Scottish schools, colleges and cafés." />
   <meta name="twitter:image" content="https://groundworkcoffee.co.uk/assets/groundwork-logo-og.png" />
 
-  <!-- ✅ AI Discovery Tags -->
+  <!-- ✅ AI Discovery -->
   <meta name="keywords" content="barista training Scotland, coffee training Scotland, hospitality education Scotland, café training Scotland, PRU training Scotland, coffee equipment support Scotland, Reece Jack barista, coffee training UK" />
   <meta name="ai-topic" content="barista training and hospitality education in Scotland for schools, colleges, PRUs and cafés" />
-  <meta name="ai-summary" content="Groundwork Coffee delivers practical barista training pathways and hospitality skills to schools, colleges and cafés across Scotland. Founded by barista trainer Reece Jack, Groundwork supports organisations with real-world coffee skills, employability training and café equipment advice." />
-  <meta name="ai-keywords" content="barista training Scotland, Scottish coffee education, school barista workshops, café training Scotland, employability through coffee, Scottish hospitality programmes" />
+  <meta name="ai-summary" content="Groundwork Coffee delivers practical barista training pathways and hospitality skills to schools, colleges and cafés across Scotland." />
 
   <!-- ✅ Icons -->
-  <link rel="icon" type="image/png" href="assets/groundwork logo.png" />
-  <link rel="apple-touch-icon" href="assets/groundwork logo.png" />
+  <link rel="icon" type="image/png" href="/assets/groundwork%20logo.png" />
+  <link rel="apple-touch-icon" href="/assets/groundwork%20logo.png" />
 
-  <!-- ✅ Fonts + CSS -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <!-- ✅ Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Tailwind Configuration -->
+  <!-- ✅ Tailwind -->
   <script>
-    window.tailwind = window.tailwind || {};
-    window.tailwind.config = {
+    window.tailwind = {
       theme: {
         extend: {
           colors: {
             coffee: '#4a1f0b',
             cream: '#e8dfcc',
-            accent: '#f97316',
+            accent: '#f97316'
           },
           fontFamily: {
-            figtree: ['Figtree', 'system-ui', 'sans-serif'],
-          },
-          boxShadow: {
-            hover: '0 12px 24px -12px rgba(74, 31, 11, 0.25)',
-          },
-        },
-      },
+            figtree: ['Figtree', 'system-ui', 'sans-serif']
+          }
+        }
+      }
     };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ Structured Data for Google / AI -->
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- ✅ Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,328 +69,125 @@
     "name": "Groundwork Coffee",
     "url": "https://groundworkcoffee.co.uk",
     "logo": "https://groundworkcoffee.co.uk/assets/groundwork%20logo.png",
-    "description": "Groundwork Coffee provides barista training, hospitality education and café equipment support for schools, colleges and cafés across Scotland and the UK.",
     "founder": {
       "@type": "Person",
-      "name": "Reece Jack",
-      "jobTitle": "Founder & Lead Barista Trainer"
+      "name": "Reece Jack"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "GB",
-      "addressRegion": "Scotland"
-    },
-    "sameAs": [
-      "https://www.instagram.com/groundwork_coffee"
-    ]
+    "sameAs": ["https://www.instagram.com/groundwork_coffee"]
   }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://groundworkcoffee.co.uk/#business",
-  "name": "Groundwork Coffee",
-  "url": "https://groundworkcoffee.co.uk",
-  "logo": "https://groundworkcoffee.co.uk/assets/groundwork%20logo.png",
-  "image": "https://groundworkcoffee.co.uk/assets/groundwork-logo-og.png",
-  "description": "Barista training and café support for schools, colleges, PRUs and hospitality partners across Scotland and the UK.",
-  "founder": {
-    "@type": "Person",
-    "name": "Reece Jack",
-    "jobTitle": "Founder & Lead Barista Trainer"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Scotland",
-    "addressCountry": "GB"
-  },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Scotland" },
-    { "@type": "Country", "name": "United Kingdom" }
-  ],
-  "sameAs": [
-    "https://www.instagram.com/groundwork_coffee"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Training & Coffee Solutions",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Barista Fundamentals" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Latte Art & Service Skills" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Employer-Ready Modules" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Café Equipment & Setup Advice" } }
-    ]
-  },
-  "knowsAbout": [
-    "barista training Scotland",
-    "school & college hospitality programmes",
-    "PRU coffee workshops",
-    "café equipment and workflow",
-    "employability through coffee"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "contactType": "Sales",
-    "areaServed": "GB",
-    "availableLanguage": ["English"],
-    "url": "https://groundworkcoffee.co.uk/contact.html"
-  }]
-}
-</script>
 </head>
 
-  <body data-page="home" class="bg-white text-black font-figtree">
-    <div id="nav-placeholder"></div>
+<body data-page="home" class="bg-white text-black font-figtree">
 
-    <main>
-      <!-- HERO -->
-      <section class="bg-cream/60">
-        <div class="mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 py-20 md:flex-row">
-          <!-- LEFT: text block -->
-          <div class="w-full md:w-1/2 flex flex-col items-start space-y-6">
-            <!-- badge -->
-            <span
-              class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee shadow"
-            >
-              Coffee. Skills. Opportunity.
-            </span>
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
 
-        
-  <!-- wordmark + paragraph -->
-  <div class="w-full">
-    <h1 class="text-4xl font-bold text-coffee md:text-5xl leading-none">
-      <span class="sr-only">Groundwork for young baristas.</span>
-      <img
-        src="assets/groundworktexticon.png"
-        alt="Groundwork"
-        class="block h-16 w-auto md:h-20 -ml-[4px] sm:-ml-[6px]"
-      />
-    </h1>
+  <main>
+    <!-- HERO -->
+    <section class="bg-cream/60">
+      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col md:flex-row gap-12 items-center">
 
-              <p class="text-lg text-neutral-700 max-w-prose">
-                Groundwork trains young adults in specialty coffee and wraps mentoring around every pour — building
-                confidence that leads to real work in cafés, events and hospitality.
-              </p>
-            </div>
+        <div class="md:w-1/2 space-y-6">
+          <span class="inline-flex rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase text-coffee shadow">
+            Coffee. Skills. Opportunity.
+          </span>
 
-            <!-- buttons -->
-            <div class="flex flex-col gap-3 sm:flex-row self-start">
-              <a
-                href="contact.html#enquiryForm"
-                class="inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
-              >
-                Book training
-              </a>
+          <img src="/assets/groundworktexticon.png" alt="Groundwork" class="h-20" />
 
-              <a
-                href="solutions.html#partners"
-                class="inline-flex items-center justify-center rounded-full border border-[#5a2b10] bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#5a2b10] hover:shadow-lg"
-              >
-                Partner with us
-              </a>
-            </div>
-          </div>
+          <p class="text-lg text-neutral-700 max-w-prose">
+            Groundwork trains young adults in specialty coffee and wraps mentoring around every pour —
+            building confidence that leads to real work in cafés, events and hospitality.
+          </p>
 
-          <!-- RIGHT: hero image -->
-          <div class="w-full md:w-1/2">
-            <div class="rounded-3xl bg-white p-8 shadow-xl">
-              <img src="assets/groundwork logo.png" alt="Groundwork coffee hand logo" class="logo-pop mx-auto w-64" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- OUR PATHWAY (brown + inverted) -->
-      <section class="bg-[#5a2b10] text-white">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
-          <div class="space-y-6">
-            <p class="text-sm font-semibold uppercase tracking-wide text-cream">Our pathway</p>
-            <h2 class="text-3xl font-bold text-white md:text-4xl">
-              Training to employment, 18 grams at a time
-            </h2>
-            <p class="text-white/85">
-              Young adults join Groundwork to gain accredited coffee skills, but they leave with far more — confidence,
-              community and a direct line to employers that believe in second chances.
-            </p>
-
-            <div class="space-y-4 text-white/85">
-              <div class="flex items-start gap-4">
-                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#5a2b10]">
-                  1
-                </span>
-                <p>Hands-on specialty barista training that mirrors real café workflow.</p>
-              </div>
-              <div class="flex items-start gap-4">
-                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#5a2b10]">
-                  2
-                </span>
-                <p>Mentoring and employability support focused on soft skills.</p>
-              </div>
-              <div class="flex items-start gap-4">
-                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#5a2b10]">
-                  3
-                </span>
-                <p>Placements and work opportunities with partner cafés and hospitality venues.</p>
-              </div>
-            </div>
-
-            <a
-              href="about.html"
-              class="inline-flex items-center text-sm font-semibold text-cream transition hover:text-white"
-            >
-              Learn more about our mission →
+          <div class="flex gap-3">
+            <a href="/contact.html#enquiryForm"
+              class="rounded-full bg-coffee px-6 py-3 text-sm font-semibold text-white border border-coffee hover:bg-white hover:text-coffee transition">
+              Book training
+            </a>
+            <a href="/solutions.html#partners"
+              class="rounded-full border border-coffee px-6 py-3 text-sm font-semibold text-coffee hover:bg-coffee hover:text-white transition">
+              Partner with us
             </a>
           </div>
+        </div>
 
-          <!-- right card, inverted style -->
-          <div class="rounded-3xl bg-white/5 p-8 shadow-lg backdrop-blur">
-            <h3 class="text-2xl font-semibold text-white">Who we support</h3>
-            <p class="mt-4 text-white/80">
-              Groundwork works with young adults in school, leaving education or out of work. Every cohort blends
-              practical barista time with confidence-building workshops and employer introductions.
-            </p>
-            <ul class="mt-6 space-y-3 text-white/80">
-              <li class="flex items-center gap-3">
-                <span class="h-2 w-6 rounded-full bg-cream"></span>Schools &amp; colleges
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-2 w-6 rounded-full bg-cream"></span>Pupil referral units
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-2 w-6 rounded-full bg-cream"></span>Hospitality employers
-              </li>
-            </ul>
+        <div class="md:w-1/2">
+          <div class="rounded-3xl bg-white p-8 shadow-xl">
+            <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="mx-auto w-64" />
           </div>
         </div>
-      </section>
 
-      <!-- rest of your sections -->
-      <section class="bg-cream/60">
-        <!-- ... -->
-      </section>
+      </div>
+    </section>
 
-      <section class="bg-white">
-        <!-- ... -->
-      </section>
-    </main>
+    <!-- PATHWAY -->
+    <section class="bg-coffee text-white">
+      <div class="mx-auto max-w-6xl px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
 
-    <div id="footer-placeholder"></div>
+        <div class="space-y-6">
+          <p class="uppercase text-sm text-cream">Our pathway</p>
+          <h2 class="text-4xl font-bold">Training to employment, 18 grams at a time</h2>
+          <p class="text-white/80">
+            Young adults gain accredited coffee skills, confidence and a direct line to employers
+            who believe in second chances.
+          </p>
+        </div>
 
-    <script>
-      function highlightActiveNav() {
-        const pageKey = document.body.dataset.page;
-        if (!pageKey) return;
-        const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
-        navLinks.forEach((link) => {
-          const targets = (link.dataset.page || '').split(' ');
-          if (targets.includes(pageKey)) {
-            link.classList.add('text-accent');
-          } else {
-            link.classList.remove('text-accent');
-          }
-        });
-      }
+        <div class="bg-white/10 rounded-3xl p-8">
+          <h3 class="text-2xl font-semibold mb-4">Who we support</h3>
+          <ul class="space-y-3 text-white/80">
+            <li>• Schools & colleges</li>
+            <li>• Pupil referral units</li>
+            <li>• Hospitality employers</li>
+          </ul>
+        </div>
 
-      function loadPartial(id, url, callback) {
-        fetch(url)
-          .then((response) => response.text())
-          .then((html) => {
-            const container = document.getElementById(id);
-            if (container) container.innerHTML = html;
-            if (typeof callback === 'function') callback();
-          });
-      }
+      </div>
+    </section>
+  </main>
 
-      document.addEventListener('DOMContentLoaded', () => {
-        loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
-        loadPartial('footer-placeholder', 'footer.html');
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ✅ SINGLE SHARED SCRIPT -->
+  <script>
+    function loadPartial(id, url, callback) {
+      fetch(url)
+        .then(res => {
+          if (!res.ok) throw new Error(url + ' ' + res.status);
+          return res.text();
+        })
+        .then(html => {
+          const el = document.getElementById(id);
+          if (el) el.innerHTML = html;
+          if (callback) callback();
+        })
+        .catch(err => console.error(err));
+    }
+
+    function highlightActiveNav() {
+      const pageKey = document.body.dataset.page;
+      document.querySelectorAll('#nav-placeholder [data-page]').forEach(link => {
+        const targets = (link.dataset.page || '').split(' ');
+        link.classList.toggle('text-accent', targets.includes(pageKey));
       });
-    </script>
-    <script>
-  // Load nav/footer partials
-  function loadPartial(id, url, callback) {
-    fetch(url)
-      .then(res => res.text())
-      .then(html => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = html;
-        if (typeof callback === 'function') callback();
-      })
-      .catch(err => console.error('Error loading partial:', url, err));
-  }
+    }
 
-  // Optional: highlight the active nav link (requires data-page attributes on links)
-  function highlightActiveNav() {
-    const pageKey = document.body.dataset.page;
-    if (!pageKey) return;
-    const navLinks = document.querySelectorAll('#nav-placeholder [data-page]');
-    navLinks.forEach((link) => {
-      const targets = (link.dataset.page || '').split(' ');
-      link.classList.toggle('text-accent', targets.includes(pageKey));
-    });
-  }
-
-  // ✅ Event delegation: works even when nav is injected after DOM ready
-  (function attachGlobalNavHandlers() {
-    document.addEventListener('click', function (e) {
-      const toggleBtn = e.target.closest('#navToggle');
-      if (toggleBtn) {
-        const menu = document.getElementById('mobileMenu');
-        const iconOpen = document.getElementById('iconOpen');
-        const iconClose = document.getElementById('iconClose');
-        if (!menu) return;
-
-        const isOpen = !menu.classList.contains('hidden');
-        if (isOpen) {
-          menu.classList.add('hidden');
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          if (iconOpen) iconOpen.classList.remove('hidden');
-          if (iconClose) iconClose.classList.add('hidden');
-        } else {
-          menu.classList.remove('hidden');
-          toggleBtn.setAttribute('aria-expanded', 'true');
-          if (iconOpen) iconOpen.classList.add('hidden');
-          if (iconClose) iconClose.classList.remove('hidden');
-        }
-      }
-
-      // Close the menu after tapping a mobile nav link
-      if (e.target.closest('#mobileMenu a')) {
-        const menu = document.getElementById('mobileMenu');
-        const btn = document.getElementById('navToggle');
-        const iconOpen = document.getElementById('iconOpen');
-        const iconClose = document.getElementById('iconClose');
-        if (menu && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-          if (iconOpen) iconOpen.classList.remove('hidden');
-          if (iconClose) iconClose.classList.add('hidden');
-        }
-      }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'Escape') return;
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('#navToggle');
+      if (!btn) return;
       const menu = document.getElementById('mobileMenu');
-      const btn = document.getElementById('navToggle');
-      const iconOpen = document.getElementById('iconOpen');
-      const iconClose = document.getElementById('iconClose');
-      if (menu && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-        if (iconOpen) iconOpen.classList.remove('hidden');
-        if (iconClose) iconClose.classList.add('hidden');
-      }
+      const open = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', open);
+      btn.setAttribute('aria-expanded', String(!open));
     });
-  })();
 
-  // Load partials on each page
-  document.addEventListener('DOMContentLoaded', () => {
-    loadPartial('nav-placeholder', 'nav.html', highlightActiveNav);
-    loadPartial('footer-placeholder', 'footer.html');
-  });
-</script>
-  </body>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadPartial('nav-placeholder', '/nav.html', highlightActiveNav);
+      loadPartial('footer-placeholder', '/footer.html');
+    });
+  </script>
+
+</body>
 </html>
