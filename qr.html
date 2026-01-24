@@ -1,5 +1,181 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Groundwork Training Enquiry</title>
+  <meta name="description" content="Quick enquiry form for Groundwork training." />
+  <meta name="robots" content="noindex, nofollow" />
 
-  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script>
+    window.tailwind = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: '#4a1f0b',
+            cream: '#e8dfcc',
+            accent: '#f97316',
+          },
+          fontFamily: {
+            figtree: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Tiny helper to keep iOS from zooming inputs */
+    input { font-size: 16px; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-[#f7f3ea] font-figtree text-neutral-900">
+  <main class="mx-auto max-w-md px-5 py-10">
+    <!-- Logo at the start -->
+    <div class="flex flex-col items-center gap-4">
+      <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="h-20 w-20" />
+      <img src="/assets/groundworktexticon.png" alt="Groundwork" class="h-10" />
+    </div>
+
+    <div class="mt-8 rounded-3xl bg-white p-6 shadow-lg">
+      <h1 class="text-xl font-bold text-coffee">Training enquiry</h1>
+      <p class="mt-2 text-sm text-neutral-700">
+        Fill this in and tap <span class="font-semibold">Send email</span>. It’ll open your email app with a pre-written message.
+      </p>
+
+      <form id="enquiryForm" class="mt-6 space-y-4" autocomplete="on">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-neutral-800">Your name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            inputmode="text"
+            autocomplete="name"
+            placeholder="e.g. Sarah Campbell"
+            class="mt-1 w-full rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-900 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="org" class="block text-sm font-semibold text-neutral-800">Organisation</label>
+          <input
+            id="org"
+            name="org"
+            type="text"
+            inputmode="text"
+            autocomplete="organization"
+            placeholder="e.g. Taylor High School"
+            class="mt-1 w-full rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-900 shadow-sm focus:border-coffee focus:outline-none focus:ring-2 focus:ring-coffee/20"
+            required
+          />
+        </div>
+
+        <div class="rounded-2xl border border-neutral-200 bg-[#fbfaf7] p-4">
+          <p class="text-sm font-semibold text-neutral-800">Message preview</p>
+          <p id="preview" class="mt-2 text-sm text-neutral-700 leading-relaxed">
+            I am interested in training.
+          </p>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow transition active:scale-[0.99] hover:bg-[#3f1d0c]"
+        >
+          Send email
+        </button>
+
+        <button
+          id="copyBtn"
+          type="button"
+          class="w-full rounded-full border border-[#5a2b10] bg-white px-6 py-3 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc]"
+        >
+          Copy message
+        </button>
+
+        <p class="text-center text-xs text-neutral-600">
+          If the email app doesn’t open, tap <span class="font-semibold">Copy message</span> and paste it into an email to
+          <span class="font-semibold">bareecesta@gmail.com</span>.
+        </p>
+      </form>
+    </div>
+
+    <p class="mt-6 text-center text-xs text-neutral-500">
+      Groundwork Coffee — Training & employability through coffee.
+    </p>
+  </main>
+
+  <script>
+    const form = document.getElementById('enquiryForm');
+    const nameInput = document.getElementById('name');
+    const orgInput = document.getElementById('org');
+    const preview = document.getElementById('preview');
+    const copyBtn = document.getElementById('copyBtn');
+
+    const toEmail = 'bareecesta@gmail.com';
+    const subject = 'Groundwork Training Enquiry';
+
+    function buildBody(name, org) {
+      return [
+        'I am interested in training.',
+        '',
+        'Name: ' + (name || ''),
+        'Organisation: ' + (org || ''),
+        '',
+        'Please contact me with details on availability and pricing.'
+      ].join('\n');
+    }
+
+    function updatePreview() {
+      const body = buildBody(nameInput.value.trim(), orgInput.value.trim());
+      // Show only the "message" part, not email headers
+      preview.textContent = body;
+    }
+
+    nameInput.addEventListener('input', updatePreview);
+    orgInput.addEventListener('input', updatePreview);
+    updatePreview();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const org = orgInput.value.trim();
+
+      const body = buildBody(name, org);
+
+      const mailto = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open the email client
+      window.location.href = mailto;
+    });
+
+    copyBtn.addEventListener('click', async () => {
+      const body = buildBody(nameInput.value.trim(), orgInput.value.trim());
+      try {
+        await navigator.clipboard.writeText(body);
+        copyBtn.textContent = 'Copied ✅';
+        setTimeout(() => (copyBtn.textContent = 'Copy message'), 1600);
+      } catch (err) {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = body;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copyBtn.textContent = 'Copied ✅';
+        setTimeout(() => (copyBtn.textContent = 'Copy message'), 1600);
+      }
+    });
+  </script>
+</body>
 </html>
