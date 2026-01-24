@@ -2,16 +2,20 @@
   <!-- Mobile top bar -->
   <div class="mx-auto max-w-6xl md:hidden">
     <div class="flex items-center justify-between px-4 py-3">
-      <a href="index.html" class="flex items-center gap-3" aria-label="Home">
-        <img src="assets/groundwork logo.png" alt="Groundwork icon logo" class="h-10 w-10" />
-        <img src="assets/groundworktexticon.png" alt="Groundwork text logo" class="h-8" />
+      <a href="/index.html" class="flex items-center gap-3" aria-label="Home">
+        <img src="/assets/groundwork%20logo.png" alt="Groundwork icon logo" class="h-10 w-10" />
+        <img src="/assets/groundworktexticon.png" alt="Groundwork text logo" class="h-8" />
       </a>
 
       <!-- Hamburger -->
-      <button id="navToggle"
+      <button
+        id="navToggle"
         class="inline-flex items-center justify-center rounded-md p-2 text-[#5a2b10] hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]"
-        aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        type="button"
+      >
         <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -29,26 +33,95 @@
       <ul class="flex flex-col gap-2 text-base font-medium text-[#5a2b10]">
 
         <li>
-          <a href="index.html" data-page="home"
+          <a href="/index.html" data-page="home"
              class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Home
           </a>
         </li>
 
         <li>
-          <a href="Our Story.html" data-page="about"
+          <a href="/about.html" data-page="about"
              class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Our Story
           </a>
         </li>
 
         <li>
-          <a href="solutions.html#partners" data-page="partners"
+          <a href="/solutions.html#partners" data-page="partners"
              class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
             Work With Us
           </a>
         </li>
 
         <li>
-          <a href="coffee-cart.html" data-page="coffee-cart"
+          <a href="/coffee-cart.html" data-page="coffee-cart"
              class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
+            Coffee Cart
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact.html" data-page="contact"
+             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Desktop nav -->
+  <div class="mx-auto hidden max-w-6xl md:block">
+    <div class="flex items-center justify-between px-6 py-4">
+      <a href="/index.html" class="flex items-center gap-3" aria-label="Home">
+        <img src="/assets/groundwork%20logo.png" alt="Groundwork icon logo" class="h-10 w-10" />
+        <img src="/assets/groundworktexticon.png" alt="Groundwork text logo" class="h-8" />
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="flex items-center gap-2 text-sm font-semibold text-[#5a2b10]">
+          <li>
+            <a href="/index.html" data-page="home"
+               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="/about.html" data-page="about"
+               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="/solutions.html#partners" data-page="partners"
+               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
+              Work With Us
+            </a>
+          </li>
+
+          <li>
+            <a href="/coffee-cart.html" data-page="coffee-cart"
+               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
+              Coffee Cart
+            </a>
+          </li>
+
+          <li>
+            <a href="/contact.html" data-page="contact"
+               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="/contact.html#enquiryForm"
+         class="hidden lg:inline-flex items-center justify-center rounded-full bg-[#5a2b10] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3f1d0c]">
+        Book training
+      </a>
+    </div>
+  </div>
+</header>
