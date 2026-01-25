@@ -51,6 +51,9 @@
           },
           fontFamily: {
             figtree: ['Figtree', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 12px 30px -18px rgba(0,0,0,0.25)'
           }
         }
       }
@@ -76,73 +79,210 @@
     "sameAs": ["https://www.instagram.com/groundwork_coffee"]
   }
   </script>
+
+  <style>
+    /* Stop iOS zooming buttons/inputs */
+    button, input, textarea, select { font-size: 16px; }
+  </style>
 </head>
 
-<body data-page="home" class="bg-white text-black font-figtree">
+<body data-page="home" class="bg-[#f7f3ea] text-black font-figtree">
 
-  <!-- NAV -->
+  <!-- NAV (loaded via /nav.html) -->
   <div id="nav-placeholder"></div>
 
-  <main>
-    <!-- HERO -->
-    <section class="bg-cream/60">
-      <div class="mx-auto max-w-6xl px-6 py-20 flex flex-col md:flex-row gap-12 items-center">
+  <main class="px-4">
+    <!-- HERO CARD (QR-page style: beige bg + white card) -->
+    <section class="pt-8 pb-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white shadow-soft border border-neutral-200 p-6 sm:p-10">
+          <div class="flex flex-col md:flex-row gap-10 items-center">
+            <!-- Left -->
+            <div class="w-full md:w-1/2 space-y-5">
+              <span class="inline-flex items-center rounded-full bg-[#fbfaf7] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee border border-neutral-200">
+                Coffee. Skills. Opportunity.
+              </span>
 
-        <div class="md:w-1/2 space-y-6">
-          <span class="inline-flex rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase text-coffee shadow">
-            Coffee. Skills. Opportunity.
-          </span>
+              <img src="/assets/groundworktexticon.png" alt="Groundwork" class="h-16 sm:h-20" />
 
-          <img src="/assets/groundworktexticon.png" alt="Groundwork" class="h-20" />
+              <p class="text-base sm:text-lg text-neutral-700 max-w-prose">
+                Groundwork trains young adults in specialty coffee and wraps mentoring around every pour —
+                building confidence that leads to real work in cafés, events and hospitality.
+              </p>
 
-          <p class="text-lg text-neutral-700 max-w-prose">
-            Groundwork trains young adults in specialty coffee and wraps mentoring around every pour —
-            building confidence that leads to real work in cafés, events and hospitality.
-          </p>
+              <!-- Fixed buttons: consistent sizing, no layout shift, better mobile -->
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="/contact.html#enquiryForm"
+                   class="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3f1d0c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
+                  Book training
+                </a>
 
-          <div class="flex gap-3">
-            <a href="/contact.html#enquiryForm"
-              class="rounded-full bg-coffee px-6 py-3 text-sm font-semibold text-white border border-coffee hover:bg-white hover:text-coffee transition">
-              Book training
-            </a>
-            <a href="/solutions.html#partners"
-              class="rounded-full border border-coffee px-6 py-3 text-sm font-semibold text-coffee hover:bg-coffee hover:text-white transition">
-              Partner with us
-            </a>
+                <a href="/solutions.html#partners"
+                   class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-[#5a2b10] bg-white px-6 py-3 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
+                  Partner with us
+                </a>
+              </div>
+
+              <p class="text-xs text-neutral-500">
+                Schools • Colleges • PRUs • Hospitality partners
+              </p>
+            </div>
+
+            <!-- Right -->
+            <div class="w-full md:w-1/2">
+              <div class="rounded-3xl bg-[#fbfaf7] border border-neutral-200 p-8 shadow-sm">
+                <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="mx-auto w-44 sm:w-56" />
+                <p class="mt-4 text-center text-sm text-neutral-600">
+                  empowering people through coffee
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
-
-        <div class="md:w-1/2">
-          <div class="rounded-3xl bg-white p-8 shadow-xl">
-            <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="mx-auto w-64" />
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- PATHWAY -->
-    <section class="bg-coffee text-white">
-      <div class="mx-auto max-w-6xl px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <!-- FEATURE BLOCKS -->
+    <section class="pb-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <div class="space-y-6">
-          <p class="uppercase text-sm text-cream">Our pathway</p>
-          <h2 class="text-4xl font-bold">Training to employment, 18 grams at a time</h2>
-          <p class="text-white/80">
-            Young adults gain accredited coffee skills, confidence and a direct line to employers
-            who believe in second chances.
-          </p>
+          <!-- Barista training -->
+          <a href="/solutions.html#barista" class="group">
+            <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] font-bold">
+                  ☕
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Core</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-coffee">Barista Training</h3>
+              <p class="mt-2 text-sm text-neutral-700">
+                Real café workflow, espresso fundamentals, milk texture, service speed.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+            </div>
+          </a>
+
+          <!-- Latte art -->
+          <a href="/solutions.html#latte-art" class="group">
+            <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] font-bold">
+                  🥛
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Skill</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-coffee">Latte Art Training</h3>
+              <p class="mt-2 text-sm text-neutral-700">
+                Milk stretching, pouring control, hearts/rosettas, consistency under pressure.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+            </div>
+          </a>
+
+          <!-- Coffee roasting -->
+          <a href="/solutions.html#roasting" class="group">
+            <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] font-bold">
+                  🔥
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Program</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-coffee">Coffee Roasting Program</h3>
+              <p class="mt-2 text-sm text-neutral-700">
+                Roast profiles, sensory cues, quality control, packaging and storytelling.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+            </div>
+          </a>
+
+          <!-- Coffee cart -->
+          <a href="/coffee-cart.html" class="group">
+            <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
+              <div class="flex items-start justify-between gap-3">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] font-bold">
+                  🚚
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Pop-up</span>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-coffee">Coffee Cart</h3>
+              <p class="mt-2 text-sm text-neutral-700">
+                Pop-up service for events + real-world practice for learners.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+            </div>
+          </a>
+
         </div>
+      </div>
+    </section>
 
-        <div class="bg-white/10 rounded-3xl p-8">
-          <h3 class="text-2xl font-semibold mb-4">Who we support</h3>
-          <ul class="space-y-3 text-white/80">
-            <li>• Schools & colleges</li>
-            <li>• Pupil referral units</li>
-            <li>• Hospitality employers</li>
-          </ul>
+    <!-- PATHWAY (kept, but made card-like) -->
+    <section class="pb-10">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-[#5a2b10] text-white p-7 sm:p-10 shadow-soft">
+          <div class="grid md:grid-cols-2 gap-10 items-start">
+            <div class="space-y-4">
+              <p class="uppercase text-xs sm:text-sm font-semibold tracking-wide text-cream/90">Our pathway</p>
+              <h2 class="text-3xl sm:text-4xl font-bold">Training to employment, 18 grams at a time</h2>
+              <p class="text-white/85">
+                Young adults gain accredited coffee skills, confidence and a direct line to employers
+                who believe in second chances.
+              </p>
+            </div>
+
+            <div class="rounded-3xl bg-white/10 border border-white/10 p-6">
+              <h3 class="text-xl font-semibold">Who we support</h3>
+              <ul class="mt-4 space-y-3 text-white/85">
+                <li class="flex items-center gap-3">
+                  <span class="h-2 w-6 rounded-full bg-cream"></span> Schools &amp; colleges
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="h-2 w-6 rounded-full bg-cream"></span> Pupil referral units
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="h-2 w-6 rounded-full bg-cream"></span> Hospitality employers
+                </li>
+              </ul>
+
+              <div class="mt-6">
+                <a href="/about.html"
+                   class="inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc]">
+                  Learn more about our mission →
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="pb-12">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-3xl bg-white border border-neutral-200 p-6 sm:p-10 shadow-soft">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h3 class="text-2xl font-bold text-coffee">Want a quick quote or a call-back?</h3>
+              <p class="mt-2 text-neutral-700">
+                Tell us what you’re looking for and we’ll recommend the right workshop or setup.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="/contact.html#enquiryForm"
+                 class="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3f1d0c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
+                Enquire now
+              </a>
+              <a href="/solutions.html"
+                 class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-[#5a2b10] bg-white px-6 py-3 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
+                See all services
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -161,7 +301,7 @@
         .then(html => {
           const el = document.getElementById(id);
           if (el) el.innerHTML = html;
-          if (callback) callback();
+          if (typeof callback === 'function') callback();
         })
         .catch(err => console.error(err));
     }
@@ -178,6 +318,7 @@
       const btn = e.target.closest('#navToggle');
       if (!btn) return;
       const menu = document.getElementById('mobileMenu');
+      if (!menu) return;
       const open = !menu.classList.contains('hidden');
       menu.classList.toggle('hidden', open);
       btn.setAttribute('aria-expanded', String(!open));
@@ -191,3 +332,4 @@
 
 </body>
 </html>
+
