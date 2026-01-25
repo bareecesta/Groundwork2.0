@@ -72,10 +72,7 @@
     "name": "Groundwork Coffee",
     "url": "https://groundworkcoffee.co.uk",
     "logo": "https://groundworkcoffee.co.uk/assets/groundwork%20logo.png",
-    "founder": {
-      "@type": "Person",
-      "name": "Reece Jack"
-    },
+    "founder": { "@type": "Person", "name": "Reece Jack" },
     "sameAs": ["https://www.instagram.com/groundwork_coffee"]
   }
   </script>
@@ -96,11 +93,22 @@
       <div class="mx-auto max-w-6xl">
         <div class="rounded-3xl bg-white shadow-soft border border-neutral-200 p-6 sm:p-10">
           <div class="flex flex-col md:flex-row gap-10 items-center">
+
             <!-- Left -->
             <div class="w-full md:w-1/2 space-y-5">
               <span class="inline-flex items-center rounded-full bg-[#fbfaf7] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-coffee border border-neutral-200">
                 Coffee. Skills. Opportunity.
               </span>
+
+              <!-- ✅ Mobile optimisation:
+                   show big logo + tagline ABOVE the text logo (mobile only).
+                   Desktop keeps the right-side logo card. -->
+              <div class="md:hidden rounded-3xl bg-[#fbfaf7] border border-neutral-200 p-6 shadow-sm">
+                <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="mx-auto w-36" />
+                <p class="mt-3 text-center text-sm text-neutral-600">
+                  empowering people through coffee
+                </p>
+              </div>
 
               <img src="/assets/groundworktexticon.png" alt="Groundwork" class="h-16 sm:h-20" />
 
@@ -127,8 +135,8 @@
               </p>
             </div>
 
-            <!-- Right -->
-            <div class="w-full md:w-1/2">
+            <!-- Right (desktop only) -->
+            <div class="hidden md:block w-full md:w-1/2">
               <div class="rounded-3xl bg-[#fbfaf7] border border-neutral-200 p-8 shadow-sm">
                 <img src="/assets/groundwork%20logo.png" alt="Groundwork logo" class="mx-auto w-44 sm:w-56" />
                 <p class="mt-4 text-center text-sm text-neutral-600">
@@ -160,7 +168,7 @@
               <p class="mt-2 text-sm text-neutral-700">
                 Espresso fundamentals, workflow, milk texture, service and speed.
               </p>
-              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Book now →</p>
             </div>
           </a>
 
@@ -177,7 +185,7 @@
               <p class="mt-2 text-sm text-neutral-700">
                 Stretching milk, pouring control, hearts &amp; rosettas, consistency.
               </p>
-              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Book now →</p>
             </div>
           </a>
 
@@ -194,11 +202,11 @@
               <p class="mt-2 text-sm text-neutral-700">
                 Roast profiles, sensory cues, quality control, packaging &amp; story.
               </p>
-              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Book now →</p>
             </div>
           </a>
 
-          <!-- Coffee cart (updated copy) -->
+          <!-- Coffee cart -->
           <a href="/coffee-cart.html" class="group">
             <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
               <div class="flex items-start justify-between gap-3">
@@ -211,7 +219,7 @@
               <p class="mt-2 text-sm text-neutral-700">
                 We’ll source the cart and coffee machine — plus <span class="font-semibold">10 weeks free training</span>.
               </p>
-              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Learn more →</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Book now →</p>
             </div>
           </a>
 
@@ -249,8 +257,8 @@
 
               <div class="mt-6">
                 <a href="/about.html"
-                   class="inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc]">
-                  Learn more about our mission →
+                   class="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
+                  Book now →
                 </a>
               </div>
             </div>
@@ -273,11 +281,11 @@
             <div class="flex flex-col sm:flex-row gap-3">
               <a href="/contact.html#enquiryForm"
                  class="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3f1d0c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
-                Enquire now
+                Book now
               </a>
               <a href="/solutions.html"
                  class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-[#5a2b10] bg-white px-6 py-3 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
-                See all services
+                View services
               </a>
             </div>
           </div>
@@ -328,6 +336,9 @@
       loadPartial('footer-placeholder', '/footer.html');
     });
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
