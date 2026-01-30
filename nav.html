@@ -46,19 +46,41 @@
           </a>
         </li>
 
-        <li>
-          <a href="/solutions.html#partners" data-page="partners"
-             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
-            Work With Us
-          </a>
+        <!-- ✅ Solutions dropdown (mobile) -->
+        <li class="rounded-2xl">
+          <details class="group">
+            <summary
+              class="list-none block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white cursor-pointer flex items-center justify-between"
+            >
+              <span class="font-medium">Solutions</span>
+              <span class="text-sm opacity-80 group-open:rotate-180 transition">⌄</span>
+            </summary>
+
+            <div class="mt-2 pl-4 flex flex-col gap-2">
+              <a href="/solutions.html#latte-art"
+                 class="block w-full px-4 py-2 rounded-full bg-white/60 text-[#5a2b10] border border-[#e8dfcc] hover:bg-[#e8dfcc] transition">
+                Latte Art Training
+              </a>
+
+              <a href="/solutions.html#coffee-cart"
+                 class="block w-full px-4 py-2 rounded-full bg-white/60 text-[#5a2b10] border border-[#e8dfcc] hover:bg-[#e8dfcc] transition">
+                Coffee Cart &amp; Machine
+              </a>
+
+              <a href="/solutions.html#roasting"
+                 class="block w-full px-4 py-2 rounded-full bg-white/60 text-[#5a2b10] border border-[#e8dfcc] hover:bg-[#e8dfcc] transition">
+                Coffee Roasting
+              </a>
+
+              <a href="/solutions.html#sqa"
+                 class="block w-full px-4 py-2 rounded-full bg-white/60 text-[#5a2b10] border border-[#e8dfcc] hover:bg-[#e8dfcc] transition">
+                SQA Barista Qualification
+              </a>
+            </div>
+          </details>
         </li>
 
-        <li>
-          <a href="/coffee-cart.html" data-page="coffee-cart"
-             class="block w-full px-4 py-2 rounded-full transition-all hover:bg-[#5a2b10] hover:text-white">
-            Coffee Cart
-          </a>
-        </li>
+        <!-- (Removed standalone Coffee Cart link since it's now under Solutions) -->
 
         <li>
           <a href="/contact.html" data-page="contact"
@@ -95,18 +117,39 @@
             </a>
           </li>
 
-          <li>
-            <a href="/solutions.html#partners" data-page="partners"
+          <!-- ✅ Solutions dropdown (desktop hover + keyboard) -->
+          <li class="relative group">
+            <a href="/solutions.html" data-page="solutions"
                class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
-              Work With Us
+              Solutions
+              <span class="ml-2 text-xs opacity-80">⌄</span>
             </a>
-          </li>
 
-          <li>
-            <a href="/coffee-cart.html" data-page="coffee-cart"
-               class="inline-flex items-center rounded-full px-4 py-2 transition hover:bg-[#e8dfcc]">
-              Coffee Cart
-            </a>
+            <div
+              class="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                     group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0
+                     absolute left-0 mt-2 w-72 rounded-2xl border border-neutral-200 bg-white shadow-lg p-2 transition"
+            >
+              <a href="/solutions.html#latte-art"
+                 class="block rounded-xl px-4 py-3 text-sm text-[#5a2b10] hover:bg-[#e8dfcc] transition">
+                Latte Art Training
+              </a>
+
+              <a href="/solutions.html#coffee-cart"
+                 class="block rounded-xl px-4 py-3 text-sm text-[#5a2b10] hover:bg-[#e8dfcc] transition">
+                Coffee Cart &amp; Machine
+              </a>
+
+              <a href="/solutions.html#roasting"
+                 class="block rounded-xl px-4 py-3 text-sm text-[#5a2b10] hover:bg-[#e8dfcc] transition">
+                Coffee Roasting
+              </a>
+
+              <a href="/solutions.html#sqa"
+                 class="block rounded-xl px-4 py-3 text-sm text-[#5a2b10] hover:bg-[#e8dfcc] transition">
+                SQA Barista Qualification
+              </a>
+            </div>
           </li>
 
           <li>
