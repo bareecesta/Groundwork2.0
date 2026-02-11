@@ -11,15 +11,17 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind -->
+  <!-- Tailwind Config -->
   <script>
     window.tailwind = {
       theme: {
         extend: {
           colors: {
-            coffee: '#4a1f0b',
-            cream: '#e8dfcc',
-            accent: '#f97316',
+            charcoal: '#111111',
+            darkcoffee: '#1b120d',
+            warmcoffee: '#6b3f2b',
+            sand: '#f3eee8',
+            accent: '#c26d3a',
           },
           fontFamily: {
             figtree: ['Figtree', 'system-ui', 'sans-serif'],
@@ -31,71 +33,96 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-cream font-figtree text-coffee">
+<body class="bg-charcoal text-sand font-figtree">
 
-  <!-- Header Section -->
-  <section class="bg-coffee text-cream py-20 px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+  <!-- NAVBAR -->
+  <nav class="bg-darkcoffee border-b border-warmcoffee/30 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-xl font-semibold tracking-wide">
+        Groundwork Coffee
+      </a>
+      <div class="space-x-8 text-sm uppercase tracking-wider">
+        <a href="index.html" class="hover:text-accent transition">Home</a>
+        <a href="solutions.html" class="hover:text-accent transition">Solutions</a>
+        <a href="shop.html" class="text-accent">Shop</a>
+        <a href="contact.html" class="hover:text-accent transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bg-darkcoffee py-24 px-6 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
       Shop
     </h1>
-    <p class="max-w-2xl mx-auto text-lg opacity-90 leading-relaxed">
-      The tools and products we sell are the same ones we use daily in real barista training environments.
-      Every item is selected for durability, precision, and performance — trusted in education and
-      professional café settings.
+    <p class="max-w-3xl mx-auto text-lg text-sand/80 leading-relaxed">
+      Every tool we sell is one we actively use in real barista training environments.
+      These are not generic products — they are trusted, education-ready tools
+      selected for precision, durability and performance in professional settings.
     </p>
   </section>
 
-  <!-- Products Section -->
-  <section class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-10">
+  <!-- PRODUCTS -->
+  <section class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12">
 
-      <!-- Product 1 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
-        <div class="h-48 bg-gray-100 rounded-xl mb-6 flex items-center justify-center">
-          <span class="text-gray-400">Product Image</span>
+      <!-- Precision Scales -->
+      <div class="bg-darkcoffee border border-warmcoffee/20 rounded-2xl p-8 hover:border-accent transition">
+        <div class="h-52 bg-charcoal rounded-xl mb-8 flex items-center justify-center">
+          <span class="text-sand/40 text-sm">Add Product Image</span>
         </div>
-        <h2 class="text-xl font-semibold mb-3">Precision Coffee Scales</h2>
-        <p class="text-sm text-gray-600 mb-6">
-          High-accuracy scales for dialling in espresso and brewing consistency.
-          Fast response time and water-resistant design.
+        <h2 class="text-2xl font-semibold mb-4">Precision Coffee Scales</h2>
+        <p class="text-sand/70 mb-8 leading-relaxed text-sm">
+          High-accuracy digital scales for espresso dial-in and brew consistency.
+          Fast response time, timer integration and built for daily workflow use.
         </p>
-        <button class="bg-accent text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
-          View Product
+        <a
+          href="https://buy.stripe.com/7sY6oG0vlfKEanwcYN3F60e"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-accent text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition"
+        >
+          Buy Now
+        </a>
+      </div>
+
+      <!-- Distributor Tool -->
+      <div class="bg-darkcoffee border border-warmcoffee/20 rounded-2xl p-8 hover:border-accent transition">
+        <div class="h-52 bg-charcoal rounded-xl mb-8 flex items-center justify-center">
+          <span class="text-sand/40 text-sm">Add Product Image</span>
+        </div>
+        <h2 class="text-2xl font-semibold mb-4">Espresso Distributor Tool</h2>
+        <p class="text-sand/70 mb-8 leading-relaxed text-sm">
+          Ensures even puck preparation for improved extraction.
+          Adjustable depth and solid build quality for consistent results in training and café environments.
+        </p>
+        <button class="bg-warmcoffee text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition">
+          Coming Soon
         </button>
       </div>
 
-      <!-- Product 2 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
-        <div class="h-48 bg-gray-100 rounded-xl mb-6 flex items-center justify-center">
-          <span class="text-gray-400">Product Image</span>
+      <!-- MHW-3BOMBER Pitcher -->
+      <div class="bg-darkcoffee border border-warmcoffee/20 rounded-2xl p-8 hover:border-accent transition">
+        <div class="h-52 bg-charcoal rounded-xl mb-8 flex items-center justify-center">
+          <span class="text-sand/40 text-sm">Add Product Image</span>
         </div>
-        <h2 class="text-xl font-semibold mb-3">Espresso Distributor Tool</h2>
-        <p class="text-sm text-gray-600 mb-6">
-          Ensures even puck preparation and improved extraction consistency.
-          Adjustable depth for precise workflow control.
+        <h2 class="text-2xl font-semibold mb-4">MHW-3BOMBER Milk Pitcher</h2>
+        <p class="text-sand/70 mb-8 leading-relaxed text-sm">
+          Competition-style stainless steel milk pitcher designed for precision latte art.
+          Balanced weight, defined spout and professional-grade finish.
         </p>
-        <button class="bg-accent text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
-          View Product
-        </button>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition">
-        <div class="h-48 bg-gray-100 rounded-xl mb-6 flex items-center justify-center">
-          <span class="text-gray-400">Product Image</span>
-        </div>
-        <h2 class="text-xl font-semibold mb-3">MHW-3BOMBER Milk Pitcher</h2>
-        <p class="text-sm text-gray-600 mb-6">
-          Competition-style stainless steel pitcher designed for precision latte art.
-          Balanced weight and sharp spout for controlled pouring.
-        </p>
-        <button class="bg-accent text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
-          View Product
+        <button class="bg-warmcoffee text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition">
+          Coming Soon
         </button>
       </div>
 
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-warmcoffee/30 py-8 text-center text-sm text-sand/50">
+    © 2026 Groundwork Coffee — Professional Coffee Solutions for Education
+  </footer>
 
 </body>
 </html>
