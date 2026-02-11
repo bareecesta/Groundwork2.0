@@ -4,38 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ✅ Primary SEO -->
   <title>Shop — Groundwork Coffee</title>
-  <meta name="description" content="Shop professional barista tools used and trusted by Groundwork Coffee." />
+  <meta name="description" content="Professional barista tools used and trusted by Groundwork Coffee." />
   <meta name="author" content="Groundwork Coffee" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://groundworkcoffee.co.uk/shop.html" />
 
-  <!-- ✅ Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:url" content="https://groundworkcoffee.co.uk/shop.html" />
-  <meta property="og:title" content="Shop — Groundwork Coffee" />
-  <meta property="og:description" content="Tools we actually use in real barista training environments — reliable, education-ready and proven in workflow." />
-  <meta property="og:image" content="https://groundworkcoffee.co.uk/assets/groundwork-logo-og.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- ✅ Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shop — Groundwork Coffee" />
-  <meta name="twitter:description" content="Professional barista tools used and recommended by Groundwork Coffee." />
-  <meta name="twitter:image" content="https://groundworkcoffee.co.uk/assets/groundwork-logo-og.png" />
-
-  <!-- ✅ Icons -->
   <link rel="icon" type="image/png" href="/assets/groundwork%20logo.png" />
   <link rel="apple-touch-icon" href="/assets/groundwork%20logo.png" />
 
-  <!-- ✅ Fonts + Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- ✅ Tailwind setup (MATCHES your solutions.html) -->
   <script>
     window.tailwind = window.tailwind || {};
     window.tailwind.config = {
@@ -58,19 +37,14 @@
     };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    button, input, textarea, select { font-size: 16px; } /* prevent iOS zoom */
-  </style>
 </head>
 
-<!-- ✅ Body background + text colour MATCHES solutions.html -->
 <body data-page="shop" class="bg-[#f7f3ea] text-black font-figtree">
   <div id="nav-placeholder"></div>
 
   <main class="px-4">
 
-    <!-- HERO (MATCHES solutions: beige bg + white card + pill tag) -->
+    <!-- HERO -->
     <section class="pt-8 pb-6">
       <div class="mx-auto max-w-6xl">
         <div class="rounded-3xl bg-white shadow-soft border border-neutral-200 p-6 sm:p-10">
@@ -89,77 +63,99 @@
               reliable, education-ready tools proven in workflow.
             </p>
 
-            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="#shop-grid"
-                 class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-[#5a2b10] bg-white px-6 py-3 text-sm font-semibold text-[#5a2b10] shadow-sm transition hover:bg-[#e8dfcc] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
-                View products
-              </a>
-              <a href="/contact.html#enquiryForm"
-                 class="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-[#5a2b10] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3f1d0c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5a2b10]">
-                Education orders
-              </a>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PRODUCTS GRID (MATCHES solutions cards: white plaques, border-neutral-200, rounded-3xl, shadow-soft, hover lift) -->
-    <section id="shop-grid" class="pb-12">
+    <!-- PRODUCTS -->
+    <section class="pb-12">
       <div class="mx-auto max-w-6xl">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          <!-- ✅ PRODUCT: SCALES (card is clickable) -->
+          <!-- ✅ SCALES -->
           <a href="https://buy.stripe.com/7sY6oG0vlfKEanwcYN3F60e" class="group">
             <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
-              <div class="flex items-start justify-between gap-3">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] text-xl">⚖️</div>
-                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Tool</span>
+
+              <div class="rounded-2xl overflow-hidden bg-[#fbfaf7] border border-neutral-200">
+                <img
+                  src="/assets/scales.png"
+                  alt="Precision Coffee Scales"
+                  class="w-full h-48 object-contain p-4"
+                  loading="lazy"
+                />
               </div>
 
-              <h3 class="mt-4 text-lg font-bold text-coffee">Precision Coffee Scales</h3>
+              <h3 class="mt-4 text-lg font-bold text-coffee">
+                Precision Coffee Scales
+              </h3>
+
               <p class="mt-2 text-sm text-neutral-700">
                 High-accuracy scales for espresso dial-in and brew consistency — built for daily workflow use.
               </p>
 
-              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">Buy now →</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">
+                Buy now →
+              </p>
+
             </div>
           </a>
 
-          <!-- PRODUCT: DISTRIBUTOR -->
+          <!-- DISTRIBUTOR -->
           <div class="group">
             <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
-              <div class="flex items-start justify-between gap-3">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] text-xl">🧰</div>
-                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Tool</span>
+
+              <div class="rounded-2xl overflow-hidden bg-[#fbfaf7] border border-neutral-200">
+                <img
+                  src="/assets/distributor.png"
+                  alt="Espresso Distributor Tool"
+                  class="w-full h-48 object-contain p-4"
+                  loading="lazy"
+                />
               </div>
 
-              <h3 class="mt-4 text-lg font-bold text-coffee">Espresso Distributor Tool</h3>
+              <h3 class="mt-4 text-lg font-bold text-coffee">
+                Espresso Distributor Tool
+              </h3>
+
               <p class="mt-2 text-sm text-neutral-700">
                 Helps even puck preparation for improved extraction consistency. Adjustable depth and solid build quality.
               </p>
 
-              <p class="mt-4 text-sm font-semibold text-neutral-400">Link coming soon</p>
+              <p class="mt-4 text-sm font-semibold text-neutral-400">
+                Link coming soon
+              </p>
+
             </div>
           </div>
 
-          <!-- PRODUCT: PITCHER -->
-          <div class="group">
+          <!-- ✅ PITCHER -->
+          <a href="https://buy.stripe.com/28E9ASfqf1TO8fobUJ3F60f" class="group">
             <div class="h-full rounded-3xl bg-white border border-neutral-200 p-5 shadow-soft transition-transform duration-200 group-hover:-translate-y-1">
-              <div class="flex items-start justify-between gap-3">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8dfcc] text-[#5a2b10] text-xl">🥛</div>
-                <span class="text-xs font-semibold uppercase tracking-wide text-neutral-500">Tool</span>
+
+              <div class="rounded-2xl overflow-hidden bg-[#fbfaf7] border border-neutral-200">
+                <img
+                  src="/assets/pitcher.png"
+                  alt="MHW-3BOMBER Milk Pitcher"
+                  class="w-full h-48 object-contain p-4"
+                  loading="lazy"
+                />
               </div>
 
-              <h3 class="mt-4 text-lg font-bold text-coffee">MHW-3BOMBER Milk Pitcher</h3>
+              <h3 class="mt-4 text-lg font-bold text-coffee">
+                MHW-3BOMBER Milk Pitcher
+              </h3>
+
               <p class="mt-2 text-sm text-neutral-700">
                 Competition-style stainless steel pitcher designed for precision latte art — balanced weight and defined spout.
               </p>
 
-              <p class="mt-4 text-sm font-semibold text-neutral-400">Link coming soon</p>
+              <p class="mt-4 text-sm font-semibold text-[#5a2b10]">
+                Buy now →
+              </p>
+
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -169,7 +165,6 @@
 
   <div id="footer-placeholder"></div>
 
-  <!-- ✅ SAME partial-loader script (root-relative partials) -->
   <script>
     function loadPartial(id, url, callback) {
       fetch(url)
@@ -202,3 +197,4 @@
 
 </body>
 </html>
+
